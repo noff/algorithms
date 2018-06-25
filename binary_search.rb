@@ -1,6 +1,8 @@
 # Recursive binary search implementation
 # @param collection [Array]
 # @param item [Any]
+# @param from [Fixnum]
+# @param to [Fixnum]
 # @return Integer
 def binary_search_recursive(collection, item, from = 0, to = nil)
 	to = (collection.count - 1) if to.nil?
