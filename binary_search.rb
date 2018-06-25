@@ -8,9 +8,9 @@ def binary_search_recursive(collection, item, from = 0, to = nil)
 	to = (collection.count - 1) if to.nil?
 	middle = (from + to) / 2
   if item < collection[middle]
-      return binary_search_recursive collection, item, from, middle - 1
+      return binary_search_recursive(collection, item, from, middle - 1)
   elsif item > collection[middle]
-      return binary_search_recursive collection, item, middle + 1, to
+      return binary_search_recursive(collection, item, middle + 1, to)
   else
       return middle
   end
